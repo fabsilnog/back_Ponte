@@ -19,7 +19,10 @@ CREATE TABLE usuario(
 );
 
 -----------------------------------------------------
-
-
-
+npm install express
+npm install mysql2
+npm install dotenv
+npx eslint --init
+npm install nodemon -D
+npm install cors
 
