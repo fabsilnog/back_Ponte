@@ -31,10 +31,18 @@ const updateAluno = async (id, task) => {
 };
 
 
+const showAluno = async (Alunoid) => {
+    
+    const [aluno] = await connection.execute('SELECT * FROM usuario WHERE Alunoid = ?', [Alunoid]);
+    return aluno;
+};
+
+
 module.exports = {
     getAll,
     createAluno,
     deleteAluno,
     updateAluno,
+    showAluno,
 
 };

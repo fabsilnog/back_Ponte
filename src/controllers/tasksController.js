@@ -28,10 +28,18 @@ const updateAluno = async (req,res) => {
     return res.status(204).json();
 };
 
+const showAluno = async (req,res) => {
+    const {id} = req.params;
+
+    const aluno = await tasksModel.showAluno(id);
+    return res.status(200).json(aluno);
+};
+
 
 module.exports = {
     getAll,
     createAluno,
     deleteAluno,
     updateAluno,
+    showAluno,
 };
